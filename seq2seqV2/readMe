@@ -1,0 +1,15 @@
+这是一个抽象为class的代码。整理了seq2seqV1中的代码
+BasicSeq2SeqModel提供的功能:
+	解码可选beamSearch或者greedy
+	可选的bidirectional
+	可选的的cell类型
+AttentionSeq2SeqModel:
+	支持BasicSeq2SeqModel的所有功能
+	加上Attention
+
+注:模型的基本架构
+	encoder:rnn
+	decoder:rnn+一个全连接层
+如果想做pix2pix这类问题，encoder和decoder都需要改变
+比如encoder可以变为卷积层，decoder可以变为卷积加全连接
+后期考虑实现
